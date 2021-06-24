@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="371.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="communicate.CommunicateController">
+   <children>
+      <Pane prefHeight="371.0" prefWidth="235.0" style="-fx-background-color: #0C60FF;">
+         <children>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="100.0" prefHeight="23.0" prefWidth="200.0" text="System Kontroli Lotów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="144.0" prefHeight="23.0" prefWidth="187.0" text="Komunikacja z samolotem" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="99.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/airport2_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="273.0" layoutY="39.0" prefHeight="23.0" prefWidth="178.0" text="ID lotu" textFill="#5e5e5e">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="273.0" layoutY="131.0" prefHeight="23.0" prefWidth="178.0" text="Wiadomość" textFill="#5e5e5e">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FlyMessage" alignment="TOP_LEFT" layoutX="288.0" layoutY="171.0" prefHeight="69.0" prefWidth="149.0" promptText="Treść wiadomości" />
+      <Button layoutX="318.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#SaveExitCommunicate" stylesheets="@../style/style.css" text="Wyślij i wyjdź" />
+      <Label fx:id="lbl_close" layoutX="480.0" layoutY="11.0" onMouseClicked="#handleCloseWindow" prefHeight="23.0" prefWidth="9.0" stylesheets="@../style/style.css" text="X" textFill="#5383ff">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="7.0" onMouseClicked="#minimize" prefHeight="2.0" prefWidth="12.0" stylesheets="@../style/style.css" text="-" textFill="#5383ff">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="FlyID" layoutX="287.0" layoutY="81.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
